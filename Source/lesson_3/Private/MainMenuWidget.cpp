@@ -3,6 +3,8 @@
 
 #include "MainMenuWidget.h"
 #include "Components/Button.h"
+#include "SSRadioButtons.h"
+#include "Components/NativeWidgetHost.h"
 
 void UMainMenuWidget::NativeConstruct()
 {
@@ -16,6 +18,15 @@ void UMainMenuWidget::NativeConstruct()
 	if (QuitBtn)
 	{
 		QuitBtn->OnPressed.AddDynamic(this, &ThisClass::OnQuitClicked);
+	}
+
+	// для 4 рока
+	if (RadioButtonsHost)
+	{
+		RadioButtonsHost->SetContent(
+			SNew(SSRadioButtons)
+			//.Count_UObject(this, &ThisClass::GetCount)
+		);
 	}
 }
 

@@ -12,7 +12,9 @@
 				"Engine",
 				"AIModule",
 				"UMGEditor",
-				"UMG"
+				"UMG",
+				"Slate",
+				"SlateCore"
 			]
 		}
 	]

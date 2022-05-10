@@ -11,6 +11,7 @@
  */
 
 class UButton;
+class UNativeWidgetHost;
 
 UCLASS(Abstract)
 class LESSON_3_API UMainMenuWidget : public UUserWidget
@@ -41,4 +42,11 @@ protected:
 
 	UFUNCTION()
 		void OnQuitClicked();
+
+	// это для 4 урока - служит для отрисовки слейтов 
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidgetOptional))
+		UNativeWidgetHost* RadioButtonsHost;
+
+	/*UFUNCTION()
+		int32 GetCount() const { return 3; }*/
 };
